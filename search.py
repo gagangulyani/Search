@@ -1,12 +1,12 @@
-"""
+description = """
+                    [ Search ]  
 
-This Program searches for a file in Directories.
+    This Program searches for a file in Directories.
 
-Displays filename containing the word if exists.
+    Displays filename containing the word if exists.
 
-Usage:
-    search SEARCH_PHRASE --METHODS
-
+    Usage:
+        search SEARCH_PHRASE --METHODS
 """
 
 from os import walk, getcwd, listdir, system
@@ -20,19 +20,18 @@ def disp_avail_args():
             AVAILABLE ARGUMENTS
             ====================
 
-        -s / -simple : SIMPLE SEARCH
+        -s / --simple : SIMPLE SEARCH
         -----------------------------
     [Searches file in Current Working Directory]
 
-        -d / -deep   : DEEP SEARCH
+        -d / --deep   : DEEP SEARCH
         ----------------------------
     [Searches file in all files and folders]
     
-        -c / -crawl  : DIRECTORY CRAWLER
+        -c / --crawl  : DIRECTORY CRAWLER
         ---------------------------------
   [Searches file by crawling through all directories]
     (root = current working directory) ["Default"]
-
 """)
 
     print("=" * 55)
@@ -115,18 +114,24 @@ for arg in argv:
 
     if arg[0] == "-":
     
-        if arg in ["-c", "-crawl"]:
+        if arg in ["-c", "--crawl"]:
             # default
             method = 1
 
-        elif arg in ["-s", "-simple"]:
+        elif arg in ["-s", "--simple"]:
             method = 2
 
-        elif arg in ["-d", "-deep"]:
+        elif arg in ["-d", "--deep"]:
             method = 3
 
         else:
             print('\n\nInvalid Argument!')
+            disp_avail_args()
+            exit()
+
+    elif arg in ["/?", "-h", "--help"]:
+            system("cls||clear") # Clears the screen
+            print(description)
             disp_avail_args()
             exit()
 
