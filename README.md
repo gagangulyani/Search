@@ -12,7 +12,10 @@ It looks for search phrase entered by the user in file names and displays the fi
 ### If executable version is in path
 > search [SearchPhrase] --arguments
 
-#### Arguments : 
+#### Example 
+> search happyness -c
+
+#### Arguments 
 > -s | -simple :
 Searches file in Current Working Directory
 
@@ -22,7 +25,7 @@ Searches file by Crawling through all Directories
 > -d | -deep :
 Searches file in all files and folders
 
-## In Windows :
+## In Windows 
 ### install pyinstaller using pip and run the following command
 > pyinstaller --onefile -n search search.py
 #### copy (from  dist directory) and paste this executable at a location and add it in PATH
