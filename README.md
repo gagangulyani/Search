@@ -7,13 +7,13 @@ It looks for search phrase entered by the user in file names and displays the fi
 
 ## Usage
 
-> python search.py [SearchPhrase] --arguments
+> python **search.py** [SearchPhrase] --arguments
 
 ### If executable version is in path
-> search [SearchPhrase] --arguments
+> **search** [SearchPhrase] --arguments
 
 #### Example 
-> search happyness -c
+> **search** happyness **-c**
 
 #### Arguments 
 > **-s | -simple :**
