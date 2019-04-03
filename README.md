@@ -16,13 +16,13 @@ It looks for search phrase entered by the user in file names and displays the fi
 > **search** happyness **-c**
 
 #### Arguments 
-> **-s | -simple :**
+> **-s | --simple :**
 Searches file in Current Working Directory
 
-> **-c | -crawl**
+> **-c | --crawl**
 Searches file by Crawling through all Directories
 
-> **-d | -deep :** 
+> **-d | --deep :** 
 Searches file in all files and folders **(UnAvailable at the Moment)**
 
 ## In Windows 
