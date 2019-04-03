@@ -9,6 +9,9 @@ It looks for search phrase entered by the user in file names and displays the fi
 
 > python search.py [SearchPhrase] --arguments
 
+### If executable version is in path
+> search [SearchPhrase] --arguments
+
 #### Arguments : 
 > -s | -simple :
 Searches file in Current Working Directory
