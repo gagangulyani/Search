@@ -2,11 +2,10 @@ description = """
                     [ Search ]  
 
     This Program searches for a file in Directories.
-
-    Displays filename containing the word if exists.
+Displays filename containing the word/Search_Phrase if exists.
 
     Usage:
-        search SEARCH_PHRASE --METHODS
+        python search.py SEARCH_PHRASE --METHODS
 """
 
 from os import walk, getcwd, listdir, system
