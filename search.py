@@ -38,11 +38,18 @@ def disp_avail_args():
     print("=" * 55)
 
 def matched(word,file):
+    # If word / search phrase contains wilcard characters..
+    # use fnmatch function else traditional substring in string
+
     if "?" in word or "*" in word:
         return fnmatch(file,word.lower())
     return word in file
 
 def crawl_search(word):
+    # Crawls through directories
+    # Displays filename along with path if found 
+    # returns number of files found
+
     count = 0 # for counting number of files found
     for root,dirs,files in walk(getcwd()):
         for file in files:
@@ -53,7 +60,13 @@ def crawl_search(word):
     return count                
 
 def simple_search(word):
+    # Searches in Current Working Directory 
+    # Without going into subdirectories
+    # Displays filename if found 
+    # returns number of files found
+
     count = 0 # for counting number of files found
+
     for file in listdir(getcwd()):
         if matched(word.lower(),file.lower()):
             count += 1
@@ -61,12 +74,16 @@ def simple_search(word):
     return count            
 
 def deep_search(word):
-    # count = 0 # for counting number of files found
+    # Searches in Files while crawling
+    # Yet to be implemented!
+
     print("\nDeep Search Coming Soon!\nTry a different method for now..\n")
     exit()
-    # return count 
 
 def found(word = "", method = 1):    
+    # Heart of the script
+
+    # Links search phrase with methods..
 
     method_names = {
     1: "Directory Crawler",
@@ -90,8 +107,8 @@ def found(word = "", method = 1):
     print("\n**Search Finished!**\n".upper())
     return count
 
-method = 1 #default
-word = ""
+method = 1 #default (Crawler)
+word = "" # Search Phrase
 
 for arg in argv:
     # Custom Argument Parser
@@ -116,7 +133,7 @@ for arg in argv:
     elif arg not in ["search_.py","search"] :
         word = arg
 
-system("cls||clear")
+system("cls||clear") # Clears the screen
 
 try:
     while True:
