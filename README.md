@@ -7,19 +7,19 @@ It looks for search phrase entered by the user in file names and displays the fi
 
 ## Usage
 
-'python search.py [SearchPhrase] --arguments'
+> python search.py [SearchPhrase] --arguments
 
 ### If executable version is in path
-'search [SearchPhrase] --arguments'
+> search [SearchPhrase] --arguments
 
 #### Arguments : 
-'-s | -simple :'
+> -s | -simple :
 Searches file in Current Working Directory
 
-' -c | -crawl '
+> -c | -crawl 
 Searches file by Crawling through all Directories
 
-' -d | -deep :'
+> -d | -deep :
 Searches file in all files and folders
 
 ## In Windows :
