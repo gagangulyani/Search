@@ -15,11 +15,13 @@ It looks for search phrase entered by the user in file names and displays the fi
 #### Example 
 > **search** happyness **-c**
 
+#### Note : It can be executed without any arguments aswell!
+
 #### Arguments 
 > **-s | --simple :**
 Searches file in Current Working Directory
 
-> **-c | --crawl**
+> **-c | --crawl** (DEFAULT)
 Searches file by Crawling through all Directories
 
 > **-d | --deep :** 
