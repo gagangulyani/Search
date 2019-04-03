@@ -24,6 +24,8 @@ Searches file by Crawling through all Directories
 
 > -d | -deep :
 Searches file in all files and folders
+#### Note
+''' This method is yet to be implemented '''
 
 ## In Windows 
 ### install pyinstaller using pip and run the following command
