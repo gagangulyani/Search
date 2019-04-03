@@ -24,5 +24,5 @@ Searches file in all files and folders
 
 ## In Windows :
 ### install pyinstaller using pip and run the following command
-'pyinstaller --onefile -n search search.py'
+> pyinstaller --onefile -n search search.py
 #### copy (from  dist directory) and paste this executable at a location and add it in PATH
