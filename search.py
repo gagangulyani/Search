@@ -50,14 +50,10 @@ def crawl_search(word):
 
     count = 0 # for counting number of files found
     for root,dirs,files in walk(getcwd()):
-        for file in files:
-            if matched(word.lower(),file.lower()):
-                count += 1
-                print("\n[FOUND] " + file)
-                print("[PATH]",root)
+        count += simple_search(word, path = root,  display = True)
     return count                
 
-def simple_search(word):
+def simple_search(word, path = getcwd(), display = None):
     # Searches in Current Working Directory 
     # Without going into subdirectories
     # Displays filename if found 
@@ -65,10 +61,15 @@ def simple_search(word):
 
     count = 0 # for counting number of files found
 
-    for file in listdir(getcwd()):
+    for file in listdir(path):
+
         if matched(word.lower(),file.lower()):
             count += 1
-            print(file)
+            if display == None:
+                print("\n{}".format(file))
+            else:
+                print ("\n[FOUND] {}".format(file))
+                print("[PATH]  {}".format(path))
     return count            
 
 def deep_search(word):
@@ -141,7 +142,7 @@ system("cls||clear") # Clears the screen
 
 try:
     while True:
-        
+
         print('-' * 30)
 
         while not word:
