@@ -134,16 +134,18 @@ for arg in argv:
             disp_avail_args()
             exit()
 
-    elif arg not in ["search_.py","search"] :
+    elif arg != __file__ and len(argv) != 1:
         word = arg
 
 system("cls||clear") # Clears the screen
 
 try:
     while True:
+        
         print('-' * 30)
 
         while not word:
+
             word = input("\n\nEnter File to be Searched or Press Ctrl + C to Exit\n\nSearch Phrase: ")
             
             if not word :
@@ -152,6 +154,9 @@ try:
             else:
                 break
 
+        system("cls||clear") # Clears the screen
+        print('='*30)
+        print("\n  Search Phrase : \"{}\"".format(word))
         print("\n**Search Started!**".upper())
         
         c = found(word,method)
@@ -163,8 +168,6 @@ try:
                 system("cls||clear")
         
         word = ""
-        
-
 
 except KeyboardInterrupt:
     print("\nSearch Terminated!")
